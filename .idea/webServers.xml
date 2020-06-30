@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c35530dc-2d6f-4570-a99a-a635871b4a1e" name="pcs">
+        <fileTransfer rootFolder="/home/bitrix/ext_www/app.pcsib.ru" accessType="SFTP" host="87.103.245.160" port="22" sshConfigId="abcfa3a2-11d0-4fd0-b0cd-97d95e4f2fd9" sshConfig="root@87.103.245.160:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

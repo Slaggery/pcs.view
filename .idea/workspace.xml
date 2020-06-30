@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f87545e6-4256-445f-aacb-066cc881e39e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="ProjectId" id="1dUOkv4JsW2ZI5HRff3ww3dXgxl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f87545e6-4256-445f-aacb-066cc881e39e" name="Default Changelist" comment="" />
+      <created>1592476351962</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592476351962</updated>
+      <workItem from="1592476353739" duration="755000" />
+      <workItem from="1592534672912" duration="16947000" />
+      <workItem from="1592881762634" duration="19267000" />
+      <workItem from="1592980110983" duration="15670000" />
+      <workItem from="1593239009146" duration="4441000" />
+      <workItem from="1593333881882" duration="78000" />
+      <workItem from="1593334081079" duration="3131000" />
+      <workItem from="1593399442308" duration="4457000" />
+      <workItem from="1593424348183" duration="51000" />
+      <workItem from="1593436040713" duration="1394000" />
+      <workItem from="1593488201792" duration="6000" />
+      <workItem from="1593493610057" duration="4863000" />
+      <workItem from="1593521683428" duration="324000" />
+      <workItem from="1593525790183" duration="3280000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="307" y="59" width="800" height="684" key="#Deployment" timestamp="1593017239712">
+      <screen x="58" y="27" width="1308" height="741" />
+    </state>
+    <state x="307" y="59" width="800" height="684" key="#Deployment/58.27.1308.741@58.27.1308.741" timestamp="1593017239712" />
+    <state x="286" y="49" width="832" height="711" key="#SSH_Configurations" timestamp="1592558315709">
+      <screen x="58" y="27" width="1308" height="741" />
+    </state>
+    <state x="286" y="49" width="832" height="711" key="#SSH_Configurations/58.27.1308.741@58.27.1308.741" timestamp="1592558315709" />
+    <state x="445" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592980138491">
+      <screen x="58" y="27" width="1308" height="741" />
+    </state>
+    <state x="445" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/58.27.1308.741@58.27.1308.741" timestamp="1592980138491" />
+    <state x="201" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1592558244898">
+      <screen x="58" y="27" width="1308" height="741" />
+    </state>
+    <state x="201" y="31" width="1022" height="737" key="SettingsEditor/58.27.1308.741@58.27.1308.741" timestamp="1592558244898" />
+    <state x="474" y="150" width="1057" height="697" key="dock-window-1" timestamp="1593244580236">
+      <screen x="58" y="27" width="1308" height="741" />
+    </state>
+    <state x="474" y="150" width="1057" height="697" key="dock-window-1/58.27.1308.741@58.27.1308.741" timestamp="1593244580236" />
+    <state x="608" y="114" width="197" height="580" key="ftp.server.browser" timestamp="1592558347922">
+      <screen x="58" y="27" width="1308" height="741" />
+    </state>
+    <state x="608" y="114" width="197" height="580" key="ftp.server.browser/58.27.1308.741@58.27.1308.741" timestamp="1592558347922" />
+    <state x="376" y="174" key="run.anything.popup" timestamp="1592984160025">
+      <screen x="58" y="27" width="1308" height="741" />
+    </state>
+    <state x="376" y="174" key="run.anything.popup/58.27.1308.741@58.27.1308.741" timestamp="1592984160024" />
+  </component>
+</project>
