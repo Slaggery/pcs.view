@@ -84,7 +84,8 @@
         computed: {
             computedHeaders: function () {
                 let headers = this.headers
-                if (this.$route.query.mode === 'pir' || this.$route.query.mode === 'smo') headers.push({
+                let mode = this.mode === 'pir' || this.mode === 'smo' || this.mode === 'superBoss'
+                if (!!mode) headers.unshift({
                     text: 'Автор',
                     value: 'UF_USER',
                     sortable: false

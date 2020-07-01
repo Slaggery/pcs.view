@@ -36,7 +36,7 @@
                         {{getSpendName(item.spendType)}}
                     </template>
                     <template v-slot:item.actions="{item}">
-                        <v-btn small icon @click="deleteItem(item)" v-if="mode !== 'smo'" :disabled="disableEditMode">
+                        <v-btn small icon @click="deleteItem(item)" :disabled="disableEditMode">
                             <v-icon small>mdi-delete</v-icon>
                         </v-btn>
                     </template>
@@ -216,7 +216,7 @@
             },
             computedHeaders() {
                 let headers = this.headers.map(hdr => {
-                    if (this.mode === 'smo' && hdr.value !== 'actions') {
+                    if (this.mode !== 'user') {
                         return hdr
                     } else {
                         return hdr
@@ -229,13 +229,12 @@
                 let edit = false
 
                 if(this.mode === 'user') {
-                    edit = this.reportStatus !== null
-                        && this.reportStatus !== 'creation'
-                        && this.reportStatus !== 'submitted'
-                        && this.reportStatus !== 'returned'
+                    edit = this.reportStatus === 'agree'
+                        || this.reportStatus === 'late'
                 } else {
                     edit = this.reportStatus === 'agree'
                 }
+                return edit
                 return edit            },
             disableReportDateField() {
                 return this.reportStatus !== null && this.reportStatus !== 'creation'
