@@ -240,7 +240,9 @@
                     || this.itemInEditor.overworkhours < 0
             },
             disableAddEmployeeButton: function () {
-                return this.direction === null || this.emplToReport === null || (this.projects.length > 0 && this.direction === 'pir')
+                return this.direction === null
+                    || this.emplToReport === null
+                    || (this.projects.length > 0 && this.direction === 'pir')
             }
         },
         watch: {

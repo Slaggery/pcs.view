@@ -1,10 +1,31 @@
 <template>
     <v-container fluid>
+        <v-dialog
+                v-model="loaderDialog"
+                hide-overlay
+                persistent
+                width="300"
+        >
+            <v-card
+                    color="primary"
+                    dark
+            >
+                <v-card-text>
+                    Загрузка
+                    <v-progress-linear
+                            indeterminate
+                            color="white"
+                            class="mb-0"
+                    ></v-progress-linear>
+                </v-card-text>
+            </v-card>
+        </v-dialog>
         <h2 v-if="this.mode === 'user'">Мои ведомости учета рабочего времени</h2>
         <h2 v-else>Ведомости учета рабочего времени</h2>
         <v-data-table
                 @click:row="viewItem"
                 :items="reports"
+                :group-desc="true"
                 group-by="UF_DATE"
                 :headers="computedHeaders"
                 :loading="reportsLoader"
@@ -45,6 +66,7 @@
         name: 'WorkTimeReport',
         data: function () {
             return {
+                loaderDialog: false,
                 userID: null,
                 reportsLoader: false,
                 reports: [],
@@ -52,7 +74,7 @@
                 headers: [
                     //{ text: 'ID', value: 'ID' },
                     //{text: 'Автор', value: 'UF_USER'},
-                    {text: 'Направление', value: 'DIRECTION'},
+                    {text: 'Направление', value: 'DIRECTION', sortable: false},
                     {text: 'Дата', value: 'UF_DATE'},
                     {text: 'Статус', value: 'STATUS', sortable: false},
                     {text: 'Действия', value: 'actions', sortable: false},
@@ -64,7 +86,8 @@
                 let headers = this.headers
                 if (this.$route.query.mode === 'pir' || this.$route.query.mode === 'smo') headers.push({
                     text: 'Автор',
-                    value: 'UF_USER'
+                    value: 'UF_USER',
+                    sortable: false
                 })
                 return headers
             }
@@ -106,6 +129,7 @@
             },
             getReports: async function () {
                 this.reportsLoader = true
+                this.loaderDialog = true
                 try {
                     let params = {
                         type: 'timeReport',
@@ -122,6 +146,7 @@
                     console.log('get Reports err', e)
                 }
                 this.reportsLoader = false
+                this.loaderDialog = false
             },
             getUserMode: async function () {
                 try {

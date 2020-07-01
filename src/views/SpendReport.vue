@@ -1,15 +1,40 @@
 <template>
     <v-container fluid>
+        <v-dialog
+                v-model="loaderDialog"
+                hide-overlay
+                persistent
+                width="300"
+        >
+            <v-card
+                    color="primary"
+                    dark
+            >
+                <v-card-text>
+                    Загрузка
+                    <v-progress-linear
+                            indeterminate
+                            color="white"
+                            class="mb-0"
+                    ></v-progress-linear>
+                </v-card-text>
+            </v-card>
+        </v-dialog>
         <h2 v-if="mode === 'user'">Мои ведомости по внутренним затратам на проекты</h2>
         <h2 v-else>Ведомости по внутренним затратам на проекты</h2>
         <v-row v-if="mode === 'pir' || mode === 'smo' || mode === 'superBoss'">
-            <v-col cols="12" class="text-right">
-                <v-btn @click="createReport" color="info">Создать ведомость</v-btn>
+            <v-col cols="3">
+                <v-select v-if="mode === 'superBoss'" v-model="direction" dense :items="directions" label="Направление"
+                          placeholder="Выберите направление"></v-select>
+            </v-col>
+            <v-col cols="3" class="text-right">
+                <v-btn @click="createReport" color="info" :disabled="createDisabled">Создать ведомость</v-btn>
             </v-col>
         </v-row>
         <v-data-table
                 @click:row="viewItem"
                 :items="reports"
+                :group-desc="true"
                 group-by="UF_DATE"
                 :headers="computedHeaders"
                 :items-per-page="30"
@@ -53,6 +78,12 @@
         name: 'SpendReport',
         data: function () {
             return {
+                loaderDialog:false,
+                direction: null,
+                directions: [
+                    {text: 'ПИР', value: 'pir'},
+                    {text: 'СМО', value: 'smo'},
+                ],
                 userID: null,
                 reportsLoader: false,
                 reports: [],
@@ -62,7 +93,7 @@
                     //{text: 'Автор', value: 'UF_USER'},
                     //{text: 'Проект', value: 'PROJECT'},
                     {text: 'Дата', value: 'UF_DATE'},
-                    {text: 'Направление', value: 'DIRECTION'},
+                    {text: 'Направление', value: 'DIRECTION', sortable: false},
                     {text: 'Статус', value: 'STATUS', sortable: false},
                     {text: 'Комментарий', value: 'comment', sortable: false},
                     {text: 'Действия', value: 'actions', sortable: false},
@@ -70,12 +101,16 @@
             }
         },
         computed: {
+            createDisabled() {
+                if (this.mode ==='superBoss') return this.direction === null;
+            },
             computedHeaders: function () {
                 let headers = this.headers
                 let mode = this.mode === 'pir' || this.mode === 'smo' || this.mode === 'superBoss'
                 if (!!mode) headers.unshift({
                     text: 'Автор',
-                    value: 'UF_USER'
+                    value: 'UF_USER',
+                    sortable: false
                 })
                 return headers
             }
@@ -87,11 +122,15 @@
         },
         methods: {
             createReport: async function () {
+                this.loaderDialog = true
                 try {
+                    let direction = this.mode
+                    if (this.mode === 'superBoss') direction = this.direction
+
                     let params = {
                         type: 'spend',
                         user: this.userID,
-                        direction: this.mode
+                        direction: direction
                     }
                     console.log('created params', params)
                     const r = await this.$http.post(`${this.$store.getters.bxapi}pcs.reports.createDefault`, params)
@@ -100,6 +139,7 @@
                 } catch (e) {
                     console.log('create report err', e)
                 }
+                this.loaderDialog = false
             },
             viewItem: function (data) {
                 console.log('view item', data)
@@ -132,6 +172,7 @@
             },
             getReports: async function () {
                 this.reportsLoader = true
+                this.loaderDialog = true
                 try {
                     let params = {
                         userMode: this.mode,
@@ -148,6 +189,7 @@
                     console.log('get Reports err', e)
                 }
                 this.reportsLoader = false
+                this.loaderDialog = false
             },
             getUserMode: async function () {
                 try {
