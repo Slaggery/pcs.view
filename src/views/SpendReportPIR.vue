@@ -465,7 +465,7 @@
                 try {
                     let report = {
                         author: this.userData.ID,
-                        direction: this.mode,
+                        direction: 'pir',
                         type: 'spend',
                         data: this.computedRows,
                         date: this.reportDate
