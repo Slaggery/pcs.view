@@ -211,7 +211,7 @@
                     })
                     console.log('createReport', r.data.result)
                     this.items = r.data.result.spends.map(s => {
-                        if(s.typeExpenses.indexOf('ФОТ') > -1) s.price = +s.price * +this.ratio
+                        if(s.typeExpenses.indexOf('ФОТ') > -1) s.price = parseFloat((+s.price * +this.ratio).toFixed(2))
                         return s
                     })
                     this.contractSummWithOutTaxes = +(r.data.result.contractSummWithOutTaxes.replace(/\D/gi, ''))
