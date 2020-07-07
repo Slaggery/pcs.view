@@ -148,7 +148,7 @@
                 return [
                     {
                         totalSpend: +this.items.reduce((t, c) => +t + +c.price, 0),
-                        totalSumm: +this.contractSummWithOutTaxes * +this.taxes,
+                        totalSumm: +this.contractSummWithOutTaxes + (+this.contractSummWithOutTaxes * +this.taxes / 100),
                         totalSummWOTaxes: +this.contractSummWithOutTaxes,
                         spendGeneral: +this.summedSpend,
                         profit: +this.contractSummWithOutTaxes - +this.items.reduce((t, c) => +t + +c.price, 0) - +this.summedSpend,
