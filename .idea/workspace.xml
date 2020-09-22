@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f87545e6-4256-445f-aacb-066cc881e39e" name="Default Changelist" comment="" />
+    <list default="true" id="f87545e6-4256-445f-aacb-066cc881e39e" name="Default Changelist" comment="исправлено direction по умолчанию">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/projectReport.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/projectReport.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +15,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -35,12 +39,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/views" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -65,11 +71,46 @@
       <workItem from="1593493610057" duration="4863000" />
       <workItem from="1593521683428" duration="324000" />
       <workItem from="1593525790183" duration="3280000" />
+      <workItem from="1593677402819" duration="7062000" />
+      <workItem from="1594094712431" duration="1120000" />
+      <workItem from="1597926535255" duration="551000" />
+      <workItem from="1599707446922" duration="7753000" />
+      <workItem from="1599973338416" duration="2199000" />
+      <workItem from="1600227227672" duration="1165000" />
+      <workItem from="1600739769204" duration="973000" />
     </task>
+    <task id="LOCAL-00001" summary="исправлено direction по умолчанию">
+      <created>1593673335599</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1593673335599</updated>
+    </task>
+    <task id="LOCAL-00002" summary="исправлено отображение сумм. установлено ограничение в 2 знака после запятой">
+      <created>1593691500434</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1593691500434</updated>
+    </task>
+    <task id="LOCAL-00003" summary="исправлена ошибка подсчета общей стоимости проекта">
+      <created>1594095823327</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1594095823327</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="исправлено direction по умолчанию" />
+    <MESSAGE value="исправлено отображение сумм. установлено ограничение в 2 знака после запятой" />
+    <MESSAGE value="исправлена ошибка подсчета общей стоимости проекта" />
+    <option name="LAST_COMMIT_MESSAGE" value="исправлена ошибка подсчета общей стоимости проекта" />
   </component>
   <component name="WindowStateProjectService">
     <state x="307" y="59" width="800" height="684" key="#Deployment" timestamp="1593017239712">
@@ -84,14 +125,34 @@
       <screen x="58" y="27" width="1308" height="741" />
     </state>
     <state x="445" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/58.27.1308.741@58.27.1308.741" timestamp="1592980138491" />
+    <state x="251" y="27" width="912" height="741" key="CommitChangelistDialog2" timestamp="1594095823007">
+      <screen x="58" y="27" width="1308" height="741" />
+    </state>
+    <state x="251" y="27" width="912" height="741" key="CommitChangelistDialog2/58.27.1308.741@58.27.1308.741" timestamp="1594095823007" />
+    <state x="491" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1599707997112">
+      <screen x="50" y="27" width="1316" height="741" />
+    </state>
+    <state x="491" y="155" width="424" height="491" key="FileChooserDialogImpl/50.27.1316.741@50.27.1316.741" timestamp="1599707997112" />
     <state x="201" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1592558244898">
       <screen x="58" y="27" width="1308" height="741" />
     </state>
     <state x="201" y="31" width="1022" height="737" key="SettingsEditor/58.27.1308.741@58.27.1308.741" timestamp="1592558244898" />
+    <state x="307" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1594095825741">
+      <screen x="58" y="27" width="1308" height="741" />
+    </state>
+    <state x="307" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/58.27.1308.741@58.27.1308.741" timestamp="1594095825741" />
+    <state x="483" y="312" width="448" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594094720093">
+      <screen x="58" y="27" width="1308" height="741" />
+    </state>
+    <state x="483" y="312" width="448" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/58.27.1308.741@58.27.1308.741" timestamp="1594094720093" />
     <state x="474" y="150" width="1057" height="697" key="dock-window-1" timestamp="1593244580236">
       <screen x="58" y="27" width="1308" height="741" />
     </state>
     <state x="474" y="150" width="1057" height="697" key="dock-window-1/58.27.1308.741@58.27.1308.741" timestamp="1593244580236" />
+    <state x="399" y="136" width="618" height="522" key="find.popup" timestamp="1600076986563">
+      <screen x="50" y="27" width="1316" height="741" />
+    </state>
+    <state x="399" y="136" width="618" height="522" key="find.popup/50.27.1316.741@50.27.1316.741" timestamp="1600076986563" />
     <state x="608" y="114" width="197" height="580" key="ftp.server.browser" timestamp="1592558347922">
       <screen x="58" y="27" width="1308" height="741" />
     </state>

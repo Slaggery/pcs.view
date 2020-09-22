@@ -123,8 +123,8 @@
                 projects: [],
                 summedSpend: 0,
                 contractSummWithOutTaxes: 0,
-                ratio: 1.18,
-                taxes: 18,
+                ratio: 1.2,
+                taxes: 20,
                 headers: [
                     {text: "Вид затрат", value: 'typeExpenses'},
                     {text: "Раздел документации", value: 'typeDocumentation'},
